@@ -26,9 +26,9 @@ struct CellView: View {
                 
                 VStack(alignment: .leading) {
                     Text(cellModel.headerText)
-                        .font(.system(size: 28))
+                        .font(.custom("Roboto-Medium.ttf", size: 28))
                     Text(cellModel.footerText)
-                        .font(.system(size: 14))
+                        .font(.custom("Roboto-Regular.ttf", size: 14))
                 }
                 .padding(.leading, 10)
                 
