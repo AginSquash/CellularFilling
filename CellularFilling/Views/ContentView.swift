@@ -19,14 +19,16 @@ struct ContentView: View {
             VStack {
                 Text("Клеточное наполнение")
                     .foregroundColor(.white)
-                    .font(.custom("Roboto-Medium.ttf", size: 28))
+                    .font(.custom("Roboto-Medium", size: 20))
                 
                 ScrollView() {
                     ScrollViewReader { proxy in
-                        ForEach(contentVM.cells, id: \.id) { cell in
-                            CellView(cellModel: cell)
-                                .id(cell.id)
-                                .frame(height: 72)
+                        VStack(spacing: 4) {
+                            ForEach(contentVM.cells, id: \.id) { cell in
+                                CellView(cellModel: cell)
+                                    .id(cell.id)
+                                    .frame(height: 72)
+                            }
                         }
                         .onAppear {
                             scrollProxy = proxy
@@ -40,7 +42,7 @@ struct ContentView: View {
                         .foregroundColor(.init(hex: "5A3472"))
                     Text("сотворить".uppercased())
                         .foregroundStyle(.white)
-                        .font(.custom("Roboto-Medium.ttf", size: 14))
+                        .font(.custom("Roboto-Medium", size: 14))
                 }
                 .frame(height: 36)
                 .onTapGesture(perform: createNewCell)

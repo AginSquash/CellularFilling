@@ -20,15 +20,15 @@ struct CellView: View {
                     Text(cellModel.imageLabel)
                         .font(.system(size: 28))
                 }
-                .frame(width: 50, height: 50)
+                .frame(width: 40, height: 40)
                 .clipShape(Circle())
-                .padding(.leading, 20)
+                .padding(.leading, 16)
                 
                 VStack(alignment: .leading) {
                     Text(cellModel.headerText)
-                        .font(.custom("Roboto-Medium.ttf", size: 28))
+                        .font(.custom("Roboto-Medium", size: 20))
                     Text(cellModel.footerText)
-                        .font(.custom("Roboto-Regular.ttf", size: 14))
+                        .font(.custom("Roboto-Regular", size: 14))
                 }
                 .padding(.leading, 5)
                 
