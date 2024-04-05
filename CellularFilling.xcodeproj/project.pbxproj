@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD51EC032BC0573F005DDF55 /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51EC022BC0573F005DDF55 /* Color+Hex.swift */; };
+		CD51EC072BC057D9005DDF55 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51EC062BC057D9005DDF55 /* CellModel.swift */; };
+		CD51EC092BC058E4005DDF55 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51EC082BC058E4005DDF55 /* CellView.swift */; };
 		CDA4B3A82BC055B200811820 /* CellularFillingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4B3A72BC055B200811820 /* CellularFillingApp.swift */; };
 		CDA4B3AA2BC055B200811820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4B3A92BC055B200811820 /* ContentView.swift */; };
 		CDA4B3AC2BC055B300811820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA4B3AB2BC055B300811820 /* Assets.xcassets */; };
@@ -14,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD51EC022BC0573F005DDF55 /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
+		CD51EC062BC057D9005DDF55 /* CellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
+		CD51EC082BC058E4005DDF55 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		CDA4B3A42BC055B200811820 /* CellularFilling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellularFilling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA4B3A72BC055B200811820 /* CellularFillingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularFillingApp.swift; sourceTree = "<group>"; };
 		CDA4B3A92BC055B200811820 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +38,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD51EC012BC0570A005DDF55 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD51EC022BC0573F005DDF55 /* Color+Hex.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CD51EC042BC057BB005DDF55 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4B3A92BC055B200811820 /* ContentView.swift */,
+				CD51EC082BC058E4005DDF55 /* CellView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD51EC052BC057C8005DDF55 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD51EC062BC057D9005DDF55 /* CellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CDA4B39B2BC055B100811820 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +82,10 @@
 		CDA4B3A62BC055B200811820 /* CellularFilling */ = {
 			isa = PBXGroup;
 			children = (
+				CD51EC052BC057C8005DDF55 /* Models */,
+				CD51EC042BC057BB005DDF55 /* Views */,
+				CD51EC012BC0570A005DDF55 /* Extensions */,
 				CDA4B3A72BC055B200811820 /* CellularFillingApp.swift */,
-				CDA4B3A92BC055B200811820 /* ContentView.swift */,
 				CDA4B3AB2BC055B300811820 /* Assets.xcassets */,
 				CDA4B3AD2BC055B300811820 /* Preview Content */,
 			);
@@ -138,7 +171,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDA4B3AA2BC055B200811820 /* ContentView.swift in Sources */,
+				CD51EC092BC058E4005DDF55 /* CellView.swift in Sources */,
 				CDA4B3A82BC055B200811820 /* CellularFillingApp.swift in Sources */,
+				CD51EC032BC0573F005DDF55 /* Color+Hex.swift in Sources */,
+				CD51EC072BC057D9005DDF55 /* CellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
