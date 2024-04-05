@@ -22,7 +22,7 @@ struct CellView: View {
                 }
                 .frame(width: 50, height: 50)
                 .clipShape(Circle())
-                .padding(.leading, 25)
+                .padding(.leading, 20)
                 
                 VStack(alignment: .leading) {
                     Text(cellModel.headerText)
@@ -30,7 +30,7 @@ struct CellView: View {
                     Text(cellModel.footerText)
                         .font(.custom("Roboto-Regular.ttf", size: 14))
                 }
-                .padding(.leading, 10)
+                .padding(.leading, 5)
                 
                 Spacer()
             }
@@ -43,6 +43,6 @@ struct CellView: View {
         Color.blue
             .ignoresSafeArea()
         CellView(cellModel: .init())
-            .frame(width: 340, height: 80, alignment: .center)
+            .frame(width: 328, height: 72, alignment: .center)
     }
 }

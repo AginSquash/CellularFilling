@@ -12,6 +12,7 @@
 		CD51EC092BC058E4005DDF55 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51EC082BC058E4005DDF55 /* CellView.swift */; };
 		CD51EC0D2BC06204005DDF55 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD51EC0B2BC06203005DDF55 /* Roboto-Regular.ttf */; };
 		CD51EC0E2BC06204005DDF55 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD51EC0C2BC06204005DDF55 /* Roboto-Medium.ttf */; };
+		CD51EC112BC06971005DDF55 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD51EC102BC06971005DDF55 /* ContentViewModel.swift */; };
 		CDA4B3A82BC055B200811820 /* CellularFillingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4B3A72BC055B200811820 /* CellularFillingApp.swift */; };
 		CDA4B3AA2BC055B200811820 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4B3A92BC055B200811820 /* ContentView.swift */; };
 		CDA4B3AC2BC055B300811820 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA4B3AB2BC055B300811820 /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 		CD51EC0B2BC06203005DDF55 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		CD51EC0C2BC06204005DDF55 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		CD51EC0F2BC0621C005DDF55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CD51EC102BC06971005DDF55 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CDA4B3A42BC055B200811820 /* CellularFilling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CellularFilling.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA4B3A72BC055B200811820 /* CellularFillingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellularFillingApp.swift; sourceTree = "<group>"; };
 		CDA4B3A92BC055B200811820 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				CD51EC062BC057D9005DDF55 /* CellModel.swift */,
+				CD51EC102BC06971005DDF55 /* ContentViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			files = (
 				CDA4B3AA2BC055B200811820 /* ContentView.swift in Sources */,
 				CD51EC092BC058E4005DDF55 /* CellView.swift in Sources */,
+				CD51EC112BC06971005DDF55 /* ContentViewModel.swift in Sources */,
 				CDA4B3A82BC055B200811820 /* CellularFillingApp.swift in Sources */,
 				CD51EC032BC0573F005DDF55 /* Color+Hex.swift in Sources */,
 				CD51EC072BC057D9005DDF55 /* CellModel.swift in Sources */,

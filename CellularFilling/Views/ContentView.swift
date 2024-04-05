@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var cells: [CellModel] = [CellModel(), CellModel()]
+    @ObservedObject var contentVM = ContentViewModel()
+    
     @State private var scrollProxy: ScrollViewProxy? = nil
     
     var body: some View {
@@ -22,7 +23,7 @@ struct ContentView: View {
                 
                 ScrollView() {
                     ScrollViewReader { proxy in
-                        ForEach(cells, id: \.id) { cell in
+                        ForEach(contentVM.cells, id: \.id) { cell in
                             CellView(cellModel: cell)
                                 .id(cell.id)
                                 .frame(height: 72)
@@ -45,7 +46,7 @@ struct ContentView: View {
                 .onTapGesture(perform: createNewCell)
             }
             .padding()
-            .onChange(of: cells, perform: { _ in
+            .onChange(of: contentVM.cells, perform: { _ in
                 scrollToBottom()
             })
         }
@@ -53,12 +54,12 @@ struct ContentView: View {
     
     func scrollToBottom() {
         withAnimation {
-            scrollProxy?.scrollTo(cells.last?.id, anchor: .bottom)
+            scrollProxy?.scrollTo(contentVM.cells.last?.id, anchor: .bottom)
         }
     }
     
     func createNewCell() {
-        cells.append(.init())
+        contentVM.addICellsToArray()
     }
 }
 
