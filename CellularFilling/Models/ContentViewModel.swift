@@ -34,24 +34,4 @@ final class ContentViewModel: ObservableObject {
             }
         }
     }
-    
-    func createAlive() {
-        var cell = CellModel()
-        
-        cell.type = .alive
-        cell.imageBackgroundColors = [.init(hex: "FFB800"), .init(hex: "FFF7B0")]
-        cell.imageLabel = "💥"
-        cell.headerText = "Живая"
-        cell.footerText = "и шевелится!"
-        
-        cells.append(cell)
-        checkNewArray()
-    }
-    
-    
-    func createDead() {
-        cells.append(CellModel.getDeadCell())
-        
-        checkNewArray()
-    }
 }
