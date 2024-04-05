@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct CellModel: Identifiable {
+struct CellModel: Identifiable, Hashable {
     enum CellType {
         case alive
         case dead

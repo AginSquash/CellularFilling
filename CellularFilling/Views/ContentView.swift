@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var cells: [CellModel] = [CellModel(), CellModel()]
+    @State private var scrollProxy: ScrollViewProxy? = nil
     
     var body: some View {
         ZStack {
@@ -19,10 +20,17 @@ struct ContentView: View {
                     .foregroundColor(.white)
                     .font(.custom("Roboto-Medium.ttf", size: 28))
                 
-                ScrollView(.vertical) {
-                    ForEach(cells) { cell in
-                        CellView(cellModel: cell)
-                            .frame(height: 72)
+                ScrollView() {
+                    ScrollViewReader { proxy in
+                        ForEach(cells, id: \.id) { cell in
+                            CellView(cellModel: cell)
+                                .id(cell.id)
+                                .frame(height: 72)
+                        }
+                        .onAppear {
+                            scrollProxy = proxy
+                        }
+                        Spacer()
                     }
                 }
                 
@@ -37,6 +45,15 @@ struct ContentView: View {
                 .onTapGesture(perform: createNewCell)
             }
             .padding()
+            .onChange(of: cells, perform: { _ in
+                scrollToBottom()
+            })
+        }
+    }
+    
+    func scrollToBottom() {
+        withAnimation {
+            scrollProxy?.scrollTo(cells.last?.id, anchor: .bottom)
         }
     }
     
