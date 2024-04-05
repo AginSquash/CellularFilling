@@ -14,19 +14,44 @@ final class ContentViewModel: ObservableObject {
     func addICellsToArray() {
         cells.append(.init())
         
-        let cellArray = cells.suffix(3).map({ $0.type })
-        guard cellArray.count >= 3 else { return }
+        checkNewArray()
+    }
+    
+    func checkNewArray() {
+        guard cells.count >= 3 else { return }
         let set = Set(cells.suffix(3).map({ $0.type }))
+        
         if set.count == 1 {
             if set.first! == .alive {
                 cells.append(CellModel.getLifeCell())
             } else {
-                if cells[cells.count - 3].type == .life {
-                    cells.remove(at: cells.count - 3)
+                guard cells.count >= 4 else { return }
+                if cells[cells.count - 4].type == .life {
+                    cells.remove(at: cells.count - 4)
                     cells.insert(CellModel.getDeadCell(), at: cells.count - 3)
                 }
                 
             }
         }
+    }
+    
+    func createAlive() {
+        var cell = CellModel()
+        
+        cell.type = .alive
+        cell.imageBackgroundColors = [.init(hex: "FFB800"), .init(hex: "FFF7B0")]
+        cell.imageLabel = "💥"
+        cell.headerText = "Живая"
+        cell.footerText = "и шевелится!"
+        
+        cells.append(cell)
+        checkNewArray()
+    }
+    
+    
+    func createDead() {
+        cells.append(CellModel.getDeadCell())
+        
+        checkNewArray()
     }
 }

@@ -44,6 +44,16 @@ struct ContentView: View {
                 }
                 .frame(height: 36)
                 .onTapGesture(perform: createNewCell)
+                
+                HStack {
+                    Button(action: createNewAlive, label: {
+                        Text("New alive")
+                    })
+                    
+                    Button(action: createNewDead, label: {
+                        Text("New dead")
+                    })
+                }
             }
             .padding()
             .onChange(of: contentVM.cells, perform: { _ in
@@ -60,6 +70,14 @@ struct ContentView: View {
     
     func createNewCell() {
         contentVM.addICellsToArray()
+    }
+    
+    func createNewAlive() {
+        contentVM.createAlive()
+    }
+    
+    func createNewDead() {
+        contentVM.createDead()
     }
 }
 
